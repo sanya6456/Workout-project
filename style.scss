@@ -39,7 +39,12 @@ body{
                     position: absolute;
                     top: 5%;
                     margin-left: 3%;
-                    p{
+                    &:hover{
+                        transform: rotate(-5deg);
+                        transition: transform 1s ease;
+                    }
+                    a{
+                        text-decoration: none;
                         font-size: 1.2em;
                         color: white;
                         font-weight: 400;
@@ -58,6 +63,7 @@ body{
                         margin: auto;
                         justify-content: center;
                         align-items: center;
+                        text-align: center;
                     }
                     h1{
                         font-size: 4em;
@@ -73,6 +79,11 @@ body{
                         width: fit-content;
                         font-size: 1.2em;
                         font-weight: 500;
+                        &:hover{
+                            color: rgb(204, 204, 204);
+                            background-color: #000;
+                            transition: 1s ease;
+                        }
                     }
                 }
             }
@@ -80,6 +91,11 @@ body{
             // show from 840px width
             .menu{
                 display: none;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.2);
+                    transition: transform 1s ease;
+                }
                 @media only screen and(max-width:840px){
                     display: block;
                     position: absolute;

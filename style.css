@@ -66,7 +66,17 @@ body .header .grid .leftgrid .logo {
   margin-left: 3%;
 }
 
-body .header .grid .leftgrid .logo p {
+body .header .grid .leftgrid .logo:hover {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+body .header .grid .leftgrid .logo a {
+  text-decoration: none;
   font-size: 1.2em;
   color: white;
   font-weight: 400;
@@ -106,6 +116,7 @@ body .header .grid .leftgrid .titlesection {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
 }
 
@@ -129,8 +140,25 @@ body .header .grid .leftgrid .titlesection .btn {
   font-weight: 500;
 }
 
+body .header .grid .leftgrid .titlesection .btn:hover {
+  color: #cccccc;
+  background-color: #000;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
 body .header .grid .menu {
   display: none;
+}
+
+body .header .grid .menu:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 @media only screen and (max-width: 840px) {
