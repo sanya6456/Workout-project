@@ -15,7 +15,7 @@ body{
         background-repeat: no-repeat;
         background-size: 140%;
         background-attachment: fixed;
-        @media only screen and(max-width:1000px){
+        @media only screen and(max-width:1250px){
             background-size: cover;
         }
         .grid{
@@ -23,6 +23,13 @@ body{
             grid-template-columns: 60% 40%;
             height: 100%;
             margin: 0;
+            @media only screen and(max-width:840px){
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+            }
             .leftgrid{
                 display: grid;
                 height: 100%;
@@ -45,6 +52,13 @@ body{
                     justify-content: center;
                     align-items: left;
                     margin-left: 5%;
+                    @media only screen and(max-width:840px){
+                        display: flex;
+                        flex-direction: column;
+                        margin: auto;
+                        justify-content: center;
+                        align-items: center;
+                    }
                     h1{
                         font-size: 4em;
                         padding-bottom: 0.6em;
@@ -62,10 +76,30 @@ body{
                     }
                 }
             }
+
+            // show from 840px width
+            .menu{
+                display: none;
+                @media only screen and(max-width:840px){
+                    display: block;
+                    position: absolute;
+                    top: 5%;
+                    right: 5%;
+                }
+                .fa-bars{
+                    color: rgb(204, 204, 204);
+                    font-size: 2.3em;
+                }
+            }
+
+            //normal size grid ...
             .rightgrid{
                 display: grid;
                 height: 100%;
                 margin: 0;
+                @media only screen and(max-width:840px){
+                    display: none;
+                }
                 .content{
                     display: grid;
                     height: 100%;
@@ -116,6 +150,14 @@ body{
                                     justify-content: space-between;
                                     p{
                                         color: rgb(204, 204, 204);
+                                        @media only screen and(max-width:1450px){
+                                            font-size: 0.9em;
+                                        }
+                                        @media only screen and(max-width:1450px){
+                                            &:last-child{
+                                                display: none;
+                                            }
+                                        }
                                     }
                                 }
                                 h2{
@@ -123,6 +165,12 @@ body{
                                     font-size: 3em;
                                     font-weight: 500;
                                     letter-spacing: 1px;
+                                    @media only screen and(max-width:1600px){
+                                        font-size: 2.5em;
+                                    }
+                                    @media only screen and(max-width:1450px){
+                                        font-size: 2em;
+                                    }
                                 }
                             }
                         }
@@ -155,10 +203,23 @@ body{
                                 color: rgb(204, 204, 204);
                                 font-size: 0.8em;
                                 line-height: 10px;
+                                &:last-child{
+                                    padding-bottom: 10%;
+                                }
                             }
                             h2{
                                 color: rgb(204, 204, 204);
                                 font-size: 1.8em;
+                                margin-bottom: 5%;
+                                @media only screen and(max-width:1300px){
+                                    font-size: 1.6em;
+                                }
+                                @media only screen and(max-width:1030px){
+                                    font-size: 1.4em;
+                                }
+                                @media only screen and(max-width:870px){
+                                    font-size: 1.2em;
+                                }
                             }
                             .day3{
                                 border: none;

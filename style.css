@@ -22,7 +22,7 @@ body .header {
   background-attachment: fixed;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1250px) {
   body .header {
     background-size: cover;
   }
@@ -35,6 +35,21 @@ body .header .grid {
       grid-template-columns: 60% 40%;
   height: 100%;
   margin: 0;
+}
+
+@media only screen and (max-width: 840px) {
+  body .header .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 body .header .grid .leftgrid {
@@ -75,6 +90,25 @@ body .header .grid .leftgrid .titlesection {
   margin-left: 5%;
 }
 
+@media only screen and (max-width: 840px) {
+  body .header .grid .leftgrid .titlesection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 body .header .grid .leftgrid .titlesection h1 {
   font-size: 4em;
   padding-bottom: 0.6em;
@@ -95,11 +129,35 @@ body .header .grid .leftgrid .titlesection .btn {
   font-weight: 500;
 }
 
+body .header .grid .menu {
+  display: none;
+}
+
+@media only screen and (max-width: 840px) {
+  body .header .grid .menu {
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+}
+
+body .header .grid .menu .fa-bars {
+  color: #cccccc;
+  font-size: 2.3em;
+}
+
 body .header .grid .rightgrid {
   display: -ms-grid;
   display: grid;
   height: 100%;
   margin: 0;
+}
+
+@media only screen and (max-width: 840px) {
+  body .header .grid .rightgrid {
+    display: none;
+  }
 }
 
 body .header .grid .rightgrid .content {
@@ -197,11 +255,35 @@ body .header .grid .rightgrid .content .col01 .toprow2 .author .space p {
   color: #cccccc;
 }
 
+@media only screen and (max-width: 1450px) {
+  body .header .grid .rightgrid .content .col01 .toprow2 .author .space p {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  body .header .grid .rightgrid .content .col01 .toprow2 .author .space p:last-child {
+    display: none;
+  }
+}
+
 body .header .grid .rightgrid .content .col01 .toprow2 .author h2 {
   color: #cccccc;
   font-size: 3em;
   font-weight: 500;
   letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 1600px) {
+  body .header .grid .rightgrid .content .col01 .toprow2 .author h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  body .header .grid .rightgrid .content .col01 .toprow2 .author h2 {
+    font-size: 2em;
+  }
 }
 
 body .header .grid .rightgrid .content .col01 .daybg {
@@ -265,9 +347,32 @@ body .header .grid .rightgrid .content .col01 .daybg p {
   line-height: 10px;
 }
 
+body .header .grid .rightgrid .content .col01 .daybg p:last-child {
+  padding-bottom: 10%;
+}
+
 body .header .grid .rightgrid .content .col01 .daybg h2 {
   color: #cccccc;
   font-size: 1.8em;
+  margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 1300px) {
+  body .header .grid .rightgrid .content .col01 .daybg h2 {
+    font-size: 1.6em;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  body .header .grid .rightgrid .content .col01 .daybg h2 {
+    font-size: 1.4em;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  body .header .grid .rightgrid .content .col01 .daybg h2 {
+    font-size: 1.2em;
+  }
 }
 
 body .header .grid .rightgrid .content .col01 .daybg .day3 {
