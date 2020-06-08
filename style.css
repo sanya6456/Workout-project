@@ -14,10 +14,11 @@ body .header {
   height: 100vh;
   margin: 0;
   overflow: hidden;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), color-stop(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(gallery/wallbg01.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(gallery/wallbg01.jpg);
-  background-position: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(gallery/womenbg011.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(gallery/womenbg011.jpg);
+  background-position: right center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -101,28 +102,29 @@ body .header .grid .rightgrid .content {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: rgba(39, 39, 39, 0.6);
-  -webkit-box-shadow: 0 0 5px rgba(39, 39, 39, 0.6);
-          box-shadow: 0 0 5px rgba(39, 39, 39, 0.6);
+  -webkit-box-shadow: 0 0 5px rgba(37, 37, 37, 0.9);
+          box-shadow: 0 0 5px rgba(37, 37, 37, 0.9);
 }
 
 body .header .grid .rightgrid .content .col01 {
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 5% 20% 25% 25% 25%;
+      grid-template-rows: 5% 20% 25% 25% 25%;
   width: 100%;
   height: 100%;
   margin: 0;
 }
 
 body .header .grid .rightgrid .content .col01 .toprow {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 10%;
-  width: 100%;
+  background-color: rgba(37, 37, 37, 0.9);
 }
 
 body .header .grid .rightgrid .content .col01 .toprow .prog {
@@ -147,5 +149,119 @@ body .header .grid .rightgrid .content .col01 .toprow .searchicon {
 body .header .grid .rightgrid .content .col01 .toprow .searchicon i {
   color: #cccccc;
   font-size: 1.2em;
+}
+
+body .header .grid .rightgrid .content .col01 .toprow2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(37, 37, 37, 0.7);
+  width: 100%;
+}
+
+body .header .grid .rightgrid .content .col01 .toprow2 .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto 10% auto 10%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+body .header .grid .rightgrid .content .col01 .toprow2 .author .space {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .header .grid .rightgrid .content .col01 .toprow2 .author .space p {
+  color: #cccccc;
+}
+
+body .header .grid .rightgrid .content .col01 .toprow2 .author h2 {
+  color: #cccccc;
+  font-size: 3em;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+body .header .grid .rightgrid .content .col01 .daybg {
+  background-color: rgba(37, 37, 37, 0.9);
+}
+
+body .header .grid .rightgrid .content .col01 .daybg .day1, body .header .grid .rightgrid .content .col01 .daybg .day2, body .header .grid .rightgrid .content .col01 .daybg .day3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: auto;
+  border-bottom: 1px solid rgba(63, 63, 63, 0.9);
+}
+
+body .header .grid .rightgrid .content .col01 .daybg .day1 .justifyrow, body .header .grid .rightgrid .content .col01 .daybg .day2 .justifyrow, body .header .grid .rightgrid .content .col01 .daybg .day3 .justifyrow {
+  margin: auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .header .grid .rightgrid .content .col01 .daybg .day1 .justifyrow .exercises, body .header .grid .rightgrid .content .col01 .daybg .day2 .justifyrow .exercises, body .header .grid .rightgrid .content .col01 .daybg .day3 .justifyrow .exercises {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .header .grid .rightgrid .content .col01 .daybg .day1 .justifyrow .how, body .header .grid .rightgrid .content .col01 .daybg .day2 .justifyrow .how, body .header .grid .rightgrid .content .col01 .daybg .day3 .justifyrow .how {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .header .grid .rightgrid .content .col01 .daybg p {
+  color: #cccccc;
+}
+
+body .header .grid .rightgrid .content .col01 .daybg h2 {
+  color: #cccccc;
+}
+
+body .header .grid .rightgrid .content .col01 .daybg .day3 {
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
