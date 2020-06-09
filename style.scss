@@ -9,7 +9,6 @@ body{
     .header{
         height: 100vh;
         margin: 0;
-        overflow: hidden;
         background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(gallery/womenbg011.jpg);
         background-position: left center;
         background-repeat: no-repeat;
@@ -17,6 +16,9 @@ body{
         background-attachment: fixed;
         @media only screen and(max-width:1250px){
             background-size: cover;
+        }
+        @media only screen and(max-width:840px){
+            background-color: #181818;
         }
         .grid{
             display: grid;
@@ -39,10 +41,6 @@ body{
                     position: absolute;
                     top: 5%;
                     margin-left: 3%;
-                    &:hover{
-                        transform: rotate(-5deg);
-                        transition: transform 1s ease;
-                    }
                     a{
                         text-decoration: none;
                         font-size: 1.2em;
@@ -70,19 +68,28 @@ body{
                         padding-bottom: 0.6em;
                         word-spacing: -8px;
                         line-height: 1em;
+                        @media only screen and(max-width:414px){
+                            font-size: 3em;
+                        }
                     }
                     p{
                         font-size: 1.2em;
                         margin-bottom: 2em;
+                        @media only screen and(max-width:414px){
+                            font-size: 1em;
+                        }
                     }
                     .btn{
                         width: fit-content;
                         font-size: 1.2em;
                         font-weight: 500;
+                        @media only screen and(max-width:414px){
+                            font-size: 1em;
+                        }
                         &:hover{
                             color: rgb(204, 204, 204);
                             background-color: #000;
-                            transition: 1s ease;
+                            transition: 0.5s ease;
                         }
                     }
                 }
@@ -192,7 +199,7 @@ body{
                         }
                         .daybg{
                             background-color: rgba(37, 37, 37, 0.9);
-                            .day1,.day2,.day3{
+                            .day{
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: center;
@@ -215,8 +222,11 @@ body{
                                     }
                                 }
                             }
+                            #lastday{
+                                border: none;
+                            }
                             p{
-                                color: rgb(204, 204, 204);
+                                color: rgba(255, 255, 255,0.8);
                                 font-size: 0.8em;
                                 line-height: 10px;
                                 &:last-child{
@@ -224,7 +234,7 @@ body{
                                 }
                             }
                             h2{
-                                color: rgb(204, 204, 204);
+                                color: rgb(255, 255, 255);
                                 font-size: 1.8em;
                                 margin-bottom: 5%;
                                 @media only screen and(max-width:1300px){
@@ -237,11 +247,100 @@ body{
                                     font-size: 1.2em;
                                 }
                             }
-                            .day3{
-                                border: none;
+                        }
+                    }
+                }
+            }
+        }
+        .openmenubg{
+            display: grid;
+            height: 100%;
+            width: 100vw;
+            margin: 0;
+            overflow-y: scroll;
+            .openmenusize{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                display: grid;
+                grid-template-rows: 10% 15% 25% 25% 25%;
+                background-color: #181818;
+                .firstrow{
+                    display: flex;
+                    width: 80%;
+                    margin: auto;
+                    justify-content: space-between;
+                    .programs{
+                        a{
+                            color: rgb(255, 255, 255);
+                            text-decoration: none;
+                            font-size: 1.2em;
+                            font-weight: 500;
+                        }
+                    }
+                    .search{
+                        cursor: pointer;
+                        i{
+                            font-size: 1.5em;
+                            color: rgb(255, 255, 255);
+                        }
+                    }
+
+                }
+                .secondrow{
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+                    margin: 0 auto;
+                    padding: 0;
+                    border-bottom: 1px solid #3d3d3d;
+                    &:nth-child(2),&:nth-child(5){
+                        border: none;
+                    }
+                    h2{
+                        @media only screen and(max-width:414px){
+                            font-size: 1.8em;
+                        }
+                    }
+                    .auth{
+                        .spacebetween{
+                            display: flex;
+                            justify-content: space-between;
+                            #ericahide{
+                                @media only screen and(max-width:600px){
+                                    display: none;
+                                }
+                            }
+                        }
+                        h2{
+                            font-size: 2.8em;
+
+                            @media only screen and(max-width:414px){
+                                font-size: 2em;
                             }
                         }
                     }
+                    .justifyrow01{
+                        display: flex;
+                        justify-content: space-between;
+                        .exercises01{
+                            p{
+                                font-size: 1em;
+                                @media only screen and(max-width:414px){
+                                    font-size: 0.8em;
+                                }
+                            }
+                        }
+                        .how01{
+                            @media only screen and(max-width:414px){
+                                font-size: 0.8em;
+                            }
+                        }
+                    }
+                }
+                color: rgba(255, 255, 255, 0.8);
+                h2{
+                    color: rgb(255, 255, 255);
                 }
             }
         }
